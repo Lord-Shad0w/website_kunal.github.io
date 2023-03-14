@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register yourself for a happy life 😄</title>
+    <link rel="stylesheet" href="../static/CSS sheets/registration.css" >
+</head>
+<body >
+  <div class="form">
+  <h1>
+    Registration form
+  </h1>
+    <form autocomplete='off'  method="post" action="/register" enctype="multipart/form-data">
+      <div class="space_inbetween">
+        <div class="col1">
+            <label class="label">First name</label>
+            <input class='fieldbox' id ='fname' type='text' name='fname' required>
+        </div>
+        <div class="col1">
+            <label class="label">Last name</label> 
+            <input class='fieldbox' id ='lname' type='text' name='lname' required>
+        </div>
+      </div>
+      <div class="space_inbetween">
+        <div class="col1">
+            <label class="label">Date of Birth</label>
+            <input class='datebox' id ='dob' type='date' name='dob' required>
+        </div>
+        <div class="col1">
+            <label class="label">Gender</label> 
+            <select class='selectbox' id ='gender' type='text' name='gender' required>
+              <option class="option" disabled selected value="">--Select--</option>
+              <option class="option" value="Male">Male</option>
+              <option class="option" value="Female">Female</option>
+              <option class="option" value="Others">Others</option>
+            </select>
+        </div>
+      </div>
+      <div class="space_inbetween">
+        <div class="col1">
+            <label class="label">Email ID</label>
+            <input class='fieldbox' id ='email' type='email' name='email' required>
+        </div>
+        <div class="col1">
+            <label class="label">Phone Number</label> 
+            <input class='fieldbox' id ='pnumber' type='number' name='pnumber' required >
+        </div>
+      </div>
+      <div class="space_inbetween">
+        <div class="col1">
+          <label class="label">Country</label>
+          <select class="selectbox" name="country" id="country">
+            <option disabled selected value="">--Select--</option>
+            {% for i in name %}
+            <option class="option" value={{ i }}>{{ i }}</option>
+            {% endfor %}
+        </select>
+        </div>
+        <div class="col1">
+          <label class="label">Resume</label>
+          <div class="container">
+            <input type="file" class="upload-box" id="file" name="file" accept=".pdf">
+          </div>
+      </div>
+      </div>
+      <div class="space_inbetween">
+        <div class="col1">
+            <label class="label">Password</label>
+            <input class='fieldbox' id ='password' type='password' name='password' required>
+        </div>
+        <div class="pswd_info">
+          <p class="info">Password must have:</p>
+          <ul>
+            <li id="length" class="invalid" ><ion-icon name="close-circle"></ion-icon>Length 8-14 characters</li>
+            <li id="capital" class="invalid" ><ion-icon name="close-circle"></ion-icon>Atleast 1 uppercase</li>
+            <li id="letter" class="invalid" ><ion-icon name="close-circle"></ion-icon>Atleast 1 lowercase</li>
+            <li id="number" class="invalid" ><ion-icon name="close-circle"></ion-icon>Atleast 1 number</li>
+            <li id="special" class="invalid" ><ion-icon name="close-circle"></ion-icon>Atleast 1 special char</li>
+          </ul>
+        </div>
+        <div class="col1">
+            <label class="label">Confirm Password</label> 
+            <input class='fieldbox' id ='cpassword' type='text' name='cpassword' required>
+        </div>
+        <div class="cpswd_info">
+          <ul>
+            <li class="invalid" id="checkpass"><ion-icon name="close-circle"></ion-icon>Passwords must match</li>
+          </ul>
+        </div>
+      </div>
+      <div class="space_between">
+        <button class='submit' type='submit' id='signup_button'> 
+            Submit
+      </button>
+      <div class="login" id="login">
+        <p>Already a member: <a href="/login">Login</a></p>
+      </div>
+      </div>
+      <div class="invalidcred">{{ msg }}</div>
+    </form>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+  <script src="../static/js/registration.js"></script>
+</body>
+</html>
