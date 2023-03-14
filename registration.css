@@ -1,0 +1,293 @@
+*{
+    font-family: Arial, Helvetica, sans-serif, Times, serif;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: url("bg4.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form
+{
+    width: 552px;
+    height: fit-content;
+    border: 3px solid cyan;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    
+    margin-top: 2%;
+    border-radius: 3%;
+}
+
+h1
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: xx-large;  
+}
+
+.label 
+{
+    font-size: 16px;
+    color: #fffafa;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+    padding-top:20px
+}
+
+.label::after{
+    content:"*";
+    color: red;
+}
+
+.fieldbox
+{
+    line-height: 30px;
+    background:transparent;
+    box-shadow: #d4d4d4;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(211, 208, 208);
+    color: #ffffff;
+
+}
+
+.space_inbetween::after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.space_inbetween
+{
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.col1
+{
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.datebox{
+    width: 200px;
+    height: em;
+    line-height: 33px;
+    background:transparent;
+    box-shadow: #d4d4d4;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(211, 208, 208);
+    color: #ffffff;
+    
+}
+
+.selectbox{
+    width: 205px;
+    height: 2.3em;
+    line-height: 38px;
+    background:transparent;
+    box-shadow: #d4d4d4;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 2px solid rgb(211, 208, 208);
+    color: #ffffff;
+    opacity: 100%
+}
+
+
+.option{
+    color:black;
+}
+.space_between
+{
+    text-align: center;
+    margin-top: 30px;
+}
+#signup_button
+{
+    width: 30%;
+    height: 45px;
+    background: blue;
+    border-color: blue;
+    box-shadow: 10px 10px 15px black;
+    border-radius: 20px;
+    color: white;
+    transition: 0.5s;
+    font-size: 20px;
+
+}
+
+#signup_button:disabled:hover
+{
+    cursor: not-allowed;
+}
+
+.pswd_info {
+    display: none;
+    position: fixed;
+    bottom: 1px;
+    left: 60px;
+    width: 160px;
+    padding: 5px;
+    background: #fefefe;
+    font-size: .750em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    border: 1px solid #ddd;
+    height: 130px;
+}
+
+.cpswd_info {
+    display: none;
+    position: fixed;
+    bottom: 85px;
+    left: 305px;
+    width: 180px;
+    padding: 0px;
+    background: #fefefe;
+    font-size: .750em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    border: 1px solid #ddd;
+    height: 48px;
+    font-size: 14px;
+    font-style: bold;
+    text-align: left;
+    color:#ff0000;
+}
+
+.invalid{
+    color:#ff0000;
+}
+
+.valid{
+    color:#209720;
+}
+
+.pswd_info ul,.cpswd_info ul{
+  padding: 0px;
+}
+
+.pswd_info li,.cpswd_info li{
+    list-style: none;
+}
+
+.pswd_info.active,.cpswd_info.active
+{
+    display: block;
+}
+
+
+#signup_button:enabled:hover
+{
+  background-color: black;
+  
+}
+
+#signup_button:disabled
+{
+  background-color: rgba(0, 0, 255, 0.3);
+  border: none;
+  color: rgba(255,255,255,0.3);
+}
+
+.upload-box{
+    font-size: 16px;
+    line-height: 36.5px;
+    background: transparent;
+    color: whitesmoke;
+    border-radius: 5px;
+    width:205px;
+    outline: none;
+}
+
+::-webkit-file-upload-button
+{
+    color: whitesmoke;
+    background: transparent;
+    padding: 5px;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    
+    outline: none;
+    transition: 0.5s;
+}
+
+::-webkit-file-upload-button:hover
+{
+    background: #1f8aee;
+}
+
+ion-icon
+{
+    height: 10px;
+}
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.invalidcred
+{
+    text-align: center;
+    margin-top: 20px;
+    color: #ff0000;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.login
+{
+    font-size: 1em;
+    color: white;
+    margin: 25px 0 10px;
+    text-align: center;
+}
+
+.login p a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.login p a:hover
+{
+    text-decoration: underline;
+    color: black;
+    font-weight: 600;
+}
+
+  
+  #popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    z-index: 9999;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
